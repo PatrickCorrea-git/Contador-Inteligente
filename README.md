@@ -20,7 +20,7 @@ Este é um projeto simples de *contador inteligente* feito com *React*. O projet
 
 1. Clone este repositório:
 
-    git clone https://github.com/seu-usuario/contador-inteligente.git
+    git clone https://github.com/PatrickCorrea-git/contador-inteligente.git
 
 2. Navegue até a pasta do projeto:
 
