@@ -36,6 +36,6 @@ function App() {
       <button onClick={handleReset}>Resetar</button>
     </div>
   );
-}
+};
 
 export default App;
