@@ -15,3 +15,13 @@ body {
     justify-content: center;
 }
 
+/* Caixa principal */
+div{
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgb(0, 0, 0.2);
+}
+
+
