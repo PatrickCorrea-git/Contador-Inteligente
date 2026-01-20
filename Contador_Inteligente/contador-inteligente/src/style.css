@@ -24,4 +24,9 @@ div{
     box-shadow: 0 10px 25px rgb(0, 0, 0.2);
 }
 
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
 
