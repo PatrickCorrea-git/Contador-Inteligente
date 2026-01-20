@@ -33,7 +33,7 @@ function App() {
       <p>Renderizações: {renderCount.current}</p>
       <button className='btn' onClick={() => setCount(count + 1)}>+</button>
       <button className='btn' onClick={() => setCount(count - 1)}>-</button>
-      <button onClick={handleReset}>Resetar</button>
+      <button id="reset" onClick={handleReset}>Resetar</button>
     </div>
   );
 };

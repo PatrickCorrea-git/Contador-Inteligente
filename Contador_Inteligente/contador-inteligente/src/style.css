@@ -48,7 +48,22 @@ button {
     transition: all 0.2s ease;
 }
 
+/* Botões + e - */
 .btn{
     background: #667eea;
     color: #fff;
+}
+
+.btn:hover {
+    background: #5563c1;
+}
+
+/* Botão reset */
+#reset{
+    background: #e63946;
+    color: #fff;
+}
+
+#reset:hover{
+    background: #c92f3b;
 }
