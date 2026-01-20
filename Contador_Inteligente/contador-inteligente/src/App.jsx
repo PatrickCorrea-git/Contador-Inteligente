@@ -31,8 +31,8 @@ function App() {
     <div>
       <h1>Contador Inteligente: {count}</h1>
       <p>Renderizações: {renderCount.current}</p>
-      <button id={1} onClick={() => setCount(count + 1)}>+</button>
-      <button id={2} onClick={() => setCount(count - 1)}>-</button>
+      <button className='btn' onClick={() => setCount(count + 1)}>+</button>
+      <button className='btn' onClick={() => setCount(count - 1)}>-</button>
       <button onClick={handleReset}>Resetar</button>
     </div>
   );

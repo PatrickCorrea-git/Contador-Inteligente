@@ -47,3 +47,8 @@ button {
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+.btn{
+    background: #667eea;
+    color: #fff;
+}
