@@ -16,7 +16,7 @@ body {
 }
 
 /* Caixa principal */
-div{
+div {
     background: #fff;
     padding: 30px 40px;
     border-radius: 12px;
@@ -30,3 +30,9 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* Texto das renderizações */
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
