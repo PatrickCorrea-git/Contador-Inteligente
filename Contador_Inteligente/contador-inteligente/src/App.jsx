@@ -15,12 +15,14 @@ function App() {
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
-    } else {
+    return;
+  } else {
       renderCount.current += 1;
     }
   });
 
   // Função para resetar os valores
+
   const handleReset = () => {
     setCount(0); // Resetando o contador de valores
     renderCount.current = 0; // Resetando o contador de renderizações
