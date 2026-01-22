@@ -6,6 +6,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [countRender, setCountRender] = useState(0);
 
+  // Controle da primeira render
+  const isFirstRender = useRef (true);
+
 
   return (
     <div>
