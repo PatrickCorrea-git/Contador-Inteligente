@@ -28,7 +28,11 @@ function App() {
 
   return (
     <div>
-     
+     <h1>Contador Inteligente: {count}</h1>
+     <p>Renderizações: {countRender}</p>
+     <button className="btn" onClick={setCount(count + 1)}>+</button>
+     <button className="btn" onClick={setCount(count - 1)}>-</button>
+     <button id="reset" onClick={handleReset}>reset</button>
     </div>
   );
 }
