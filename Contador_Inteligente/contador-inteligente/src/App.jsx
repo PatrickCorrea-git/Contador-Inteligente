@@ -19,6 +19,12 @@ function App() {
     }
   },[count]);
 
+  // Função reset
+  const handleReset = () => {
+    setCount(0);
+    setRenderCount(0);
+    isFirstRender = true;
+  }
 
   return (
     <div>
