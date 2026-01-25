@@ -16,7 +16,7 @@ function App() {
       return;
     }
 
-    setRenderCount(prev => prev + 1); // conta renderização após mudanças no count
+    setRenderCount(prev=> prev + 1); // conta renderização após mudanças no count
   },[count]); 
 
   // Função reset
@@ -25,6 +25,7 @@ function App() {
     setRenderCount(0);
     isFirstRender.current = true;
   }
+
 
   return (
     <div>
