@@ -1,39 +1,38 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, use } from "react";
 import './style.css'
 
 function App() {
-  // Estados principais
+
+  // UseState
   const [count, setCount] = useState(0);
-  const [countRender, setRenderCount] = useState(0);
+  const [countRender, setCountRender] = useState(0);
+  
+  // UseRef
+  const prevCount = useRef(count); // Armazena o valor anterior de count
 
-  // Controle da primeira render
-  const isFirstRender = useRef(true);
-
-  // Efeito que reage ao contador
+  // UseEffect
   useEffect(() => {
-    if(isFirstRender.current){
-      isFirstRender.current = false;
-      return;
+    // Se o count mudou em relação ao valor anterior, incrementa countRender
+    if (prevCount.current !== count) {
+      setCountRender(prev => prev + 1)
+      prevCount.current = count;  // Atualiza o valor anterior
     }
+  }, [count]);
 
-    setRenderCount(prev=> prev + 1); // conta renderização após mudanças no count
-  },[count]); 
-
-  // Função reset
+  // Reset function
   const handleReset = () => {
     setCount(0);
-    setRenderCount(0);
-    isFirstRender.current = true;
+    setCountRender(0);
+    prevCount.current = 0; // Reseta o valor armazenado no useRef
   }
-
 
   return (
     <div>
-     <h1>Contador Inteligente: {count}</h1>
-     <p>Renderizações: {countRender}</p>
-     <button className="btn" onClick={() => setCount(count + 1)}>+</button>
-     <button className="btn" onClick={() => setCount(count - 1)}>-</button>
-     <button id="reset" onClick={handleReset}>Resetar</button>
+      <h1>Contador Inteligente: {count}</h1>
+      <p>Renderizações: {countRender}</p>
+      <button className="btn" onClick={() => setCount(count + 1)}>+</button>
+      <button className="btn" onClick={() => setCount(count - 1)}>-</button>
+      <button id="reset" onClick={handleReset}>Resetar</button>
     </div>
   );
 }
